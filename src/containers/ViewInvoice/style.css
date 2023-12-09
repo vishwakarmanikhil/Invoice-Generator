@@ -1,0 +1,134 @@
+.preview-invoice__page {
+    background: #f2f3f7;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden auto;
+}
+
+.pi-nodata__container {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pi-nodata__container .pinc__wrap {
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+}
+
+.pi__container {
+    display: block;
+    height: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 30px 17.5px;
+}
+
+.pi__content-wrap {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px #edeff5;
+}
+
+.pi__content-wrap p {
+    text-align: initial;
+}
+
+.pi__contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+    margin-bottom: 50px;
+}
+
+.pi-items__container {
+    position: relative;
+}
+
+.pi-items__paid-wrap {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;    
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pi-items__paid-wrap p {
+    border: 5px solid #12a43b;
+    padding: 5px 15px;
+    color: #12a43b;
+    transform: rotate(-25deg);
+}
+
+.pi-items__header, .pi-item__item {
+    display: grid;
+    grid-template-columns: 60% 10% 10% 1fr;
+}
+
+.pi-items__header p:last-child, .pi-item__item p:last-child {
+    text-align: right;
+}
+
+.pi-items__header {
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0px;
+}
+
+.pi-items__header p {
+    opacity: 0.6;
+}
+
+.pi-items__body .pi-item__item {
+    padding: 15px 0px;
+}
+
+.pi-items__footer .pi-item__item:last-child {
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+.pi-items__footer .pi-item__item {
+    padding: 10px 0px;
+    
+}
+
+.pi-notes__wrap {
+    margin-top: 50px;
+}
+
+.pi-notes__wrap .ant-alert-message {
+    text-align: left;
+}
+
+@media only screen and (max-width: 767.5px) {
+    .pi__contact-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .pi-items__header, .pi-item__item {
+        grid-template-columns: 40% 20% 20% 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .pi__container {
+        padding: 30px 0px;
+    }
+
+    .pi__content-wrap {
+        border-radius: 0px;
+    }
+}
