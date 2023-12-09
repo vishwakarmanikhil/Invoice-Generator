@@ -1,0 +1,34 @@
+.page__404 {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.page__404 img {
+    width: 100%;
+}
+
+.page__404-bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+}
+
+.page__404-bg h3 {
+    font-size: 80px;
+}
+
+.back-btn {
+    display: block;
+    width: max-content;
+    color: #fff !important;
+    padding: 15px 30px;
+    background: #39ac31;
+    margin: 20px auto;
+    border-radius: 7.5px;
+    text-decoration: none;
+}
+
+.page__404-content {
+    margin-top: -50px;
+}

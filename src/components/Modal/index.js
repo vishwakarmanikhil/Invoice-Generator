@@ -9,7 +9,7 @@ export function successModal(customPreview, messageTxt) {
         content: (
             <div className='flex-column mb-50 mt-50'>
                 <CheckCircleTwoTone style={{ fontSize: 50 }} twoToneColor={Color.greenColor} />
-                <p className='h6-heading mt-20 mb-30'>{messageTxt}</p>
+                <p className='h6-heading text-align-center mt-20 mb-30'>{messageTxt}</p>
                 <div className="mb-30">
                     {customPreview}
                 </div>
@@ -28,7 +28,7 @@ export function failedModal(messageTxt) {
         content: (
             <div className='flex-column mb-50 mt-50'>
                 <CloseCircleTwoTone style={{ fontSize: 50 }} twoToneColor={Color.redColor} />
-                <p className='h6-heading mt-20 mb-30'>{messageTxt}</p>
+                <p className='h6-heading text-align-center mt-20 mb-30'>{messageTxt}</p>
                 <Button type={'primary'} size={'large'} onClick={() => Modal.destroyAll()}>Okay</Button>
             </div>
         ),
@@ -44,7 +44,7 @@ export function somethingWentWrong() {
         content: (
             <div className='flex-column mb-50 mt-50'>
                 <CloseCircleTwoTone style={{ fontSize: 50 }} twoToneColor={Color.redColor} />
-                <p className='h6-heading mt-20 mb-30'>Something Went Wrong. Please try Again!!</p>
+                <p className='h6-heading text-align-center mt-20 mb-30'>Something Went Wrong. Please try Again!!</p>
                 <Button type={'primary'} size={'large'} onClick={() => Modal.destroyAll()}>Okay</Button>
             </div>
         ),
