@@ -13,7 +13,7 @@ const EmailInvoiceModal = ({ invoiceData }) => {
     const [customEmail, setCustomEmail] = useState('');
 
     const handleSendEmail = (formData) => {
-        fetch('http://localhost:5000/sendEmail', {
+        fetch('/api/sendEmail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

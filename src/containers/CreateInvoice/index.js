@@ -39,7 +39,7 @@ const CreateInvoice = () => {
     const createInvoiceHandler = (data) => {
         setActionLoader(true);
 
-        fetch(`http://localhost:5000/createFile/${data?.invoice_number}`, {
+        fetch(`/api/createFile/${data?.invoice_number}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

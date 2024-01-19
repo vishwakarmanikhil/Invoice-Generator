@@ -14,7 +14,7 @@ const ViewInvoice = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`http://localhost:5000/getFile/${invoiceID}`);
+            const response = await fetch(`/api/getFile/${invoiceID}`);
             if (response.ok) {
               const data = await response.json();
               // console.log(data);
