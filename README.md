@@ -1,15 +1,18 @@
 # Getting Started to Run App
+Explore website: [![Website Preview](https://img.shields.io/badge/Preview-website-blue)](https://invoice-generator-nu.vercel.app/)
 
 ### Installation
 To install dependencies:
 
 1. Run `npm i` in the Project directory (For frontend dependency)
 2. Navigate to `/backend` and run `npm i` (For backend dependency)
+3. Do not forget to replace your email configuration with mine
+4. Also replace proxy URL and API endpoint URL point to backend server to get data
 
 # Frontend & Backend Packages
 
-1. **Frontend**: React with Webpack
-2. **Backend**: Express
+1. **Frontend**: React with Webpack (Live on [Vercel](https://invoice-generator-nu.vercel.app/))
+2. **Backend**: Express (Live on [Render](https://invoice-generator-t3sr.onrender.com/))
 
 # Running the App
 
@@ -46,3 +49,10 @@ Preview example invoices:
 
 1. [Dribbble](https://dribbble.com/) - Designs
 2. [Send Email - Brevo SMTP](https://www.brevo.com/)
+
+# Contributing
+Feel free to contribute to the development of this project. Fork the repository, make your changes, and submit a pull request.
+If you find this project helpful, consider giving credit to the original author [![GitHub stars](https://img.shields.io/github/stars/vishwakarmanikhil/Invoice-Generator.svg?style=social)](https://github.com/vishwakarmanikhil/Invoice-Generator) and star the project on GitHub. Your support is highly appreciated!
+
+# Acknowledgments
+Special thanks to the React community, [Vercel](https://vercel.com/), [Render](https://render.com/) and other open-source contributors for their invaluable tools and resources.
