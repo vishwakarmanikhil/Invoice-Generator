@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 // Parse incoming requests with URL-encoded payloads
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/api/createFile/:number', (req, res) => {
+app.post('/createFile/:number', (req, res) => {
     const { number } = req.params;
     const jsonData = req.body;
   
@@ -44,7 +44,7 @@ app.post('/api/createFile/:number', (req, res) => {
 });
 
 // get created file
-app.get('/api/getFile/:number', (req, res) => {
+app.get('/getFile/:number', (req, res) => {
     const { number } = req.params;
   
     const directoryPath = path.join(__dirname, 'data'); // directory path
@@ -63,7 +63,7 @@ app.get('/api/getFile/:number', (req, res) => {
 });
 
 // send email
-app.post('/api/sendEmail', async (req, res) => {
+app.post('/sendEmail', async (req, res) => {
 
   //FormData fields
   const recipientEmail = req.body.recipientEmail;

@@ -29,7 +29,7 @@ module.exports = {
         port: 3000,
         historyApiFallback: true,
         proxy: {
-            '/api/**': {
+            '/api': {
                 target: packageJson.proxy, // taking proxy from package.json file
                 pathRewrite: { 
                     '^/api': '' 
