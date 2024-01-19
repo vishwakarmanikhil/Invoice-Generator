@@ -4,11 +4,11 @@ import jsPDF from 'jspdf';
 
 export const downloadHTMLToPDFFile = (divisionID, WidthOfPdf, fileName) => {
     const element = document.getElementById(`${divisionID}`);
-    // Set the width of the content container to 600 pixels
+    // Set the width of the content container to 650 pixels
     element.style.width = `${WidthOfPdf}px`;
     const options = {
         scale: 2, // Increase scale for higher resolution
-        width: 600, // Set the desired maximum width
+        width: 650, // Set the desired maximum width
         useCORS: true, // Enable Cross-Origin Resource Sharing for external images
     };
 
