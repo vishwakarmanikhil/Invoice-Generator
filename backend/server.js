@@ -26,6 +26,14 @@ app.use(bodyParser.json());
 // Parse incoming requests with URL-encoded payloads
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// 👇️ serving static files from build directory
+app.use(express.static(path.join(__dirname, 'build')));
+
+// 👇️ catch-all route
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 app.post('/createFile/:number', (req, res) => {
     const { number } = req.params;
     const jsonData = req.body;
