@@ -12,7 +12,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // Start the server on port 5000
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 // Allow requests from specific origins
 app.use(cors({
