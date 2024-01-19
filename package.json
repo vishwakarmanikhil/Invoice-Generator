@@ -1,7 +1,7 @@
 {
   "name": "invoice-builder",
   "version": "0.1.0",
-  "proxy": "http://locahost:5000",
+  "proxy": "https://invoice-generator-t3sr.onrender.com",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "webpack-dev-server": "webpack-dev-server",
-    "dev": "webpack-dev-server --mode=development",
+    "start": "webpack-dev-server --mode=development",
     "prod": "webpack --mode=production"
   },
   "eslintConfig": {
