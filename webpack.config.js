@@ -31,9 +31,6 @@ module.exports = {
         proxy: {
             '/api': {
                 target: packageJson.proxy, // taking proxy from package.json file
-                pathRewrite: { 
-                    '^/api': '' 
-                },
                 secure: false,
                 changeOrigin: true,
             },

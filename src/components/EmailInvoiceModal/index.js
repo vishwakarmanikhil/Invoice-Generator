@@ -13,7 +13,7 @@ const EmailInvoiceModal = ({ invoiceData }) => {
     const [customEmail, setCustomEmail] = useState('');
 
     const handleSendEmail = (formData) => {
-        fetch('/api/sendEmail', {
+        fetch('https://invoice-generator-t3sr.onrender.com/sendEmail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

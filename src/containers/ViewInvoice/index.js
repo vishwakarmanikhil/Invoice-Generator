@@ -14,7 +14,7 @@ const ViewInvoice = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`/api/getFile/${invoiceID}`);
+            const response = await fetch(`https://invoice-generator-t3sr.onrender.com/getFile/${invoiceID}`);
             if (response.ok) {
               const data = await response.json();
               // console.log(data);

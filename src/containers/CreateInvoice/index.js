@@ -39,7 +39,7 @@ const CreateInvoice = () => {
     const createInvoiceHandler = (data) => {
         setActionLoader(true);
 
-        fetch(`/api/createFile/${data?.invoice_number}`, {
+        fetch(`https://invoice-generator-t3sr.onrender.com/createFile/${data?.invoice_number}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
