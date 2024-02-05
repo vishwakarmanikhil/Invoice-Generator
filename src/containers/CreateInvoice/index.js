@@ -46,34 +46,34 @@ const CreateInvoice = () => {
             },
             body: JSON.stringify(data),
         })
-        .then((response) => {
-            response.text()
-            let status_code = response?.status;
-            if(status_code === 200) {
-                invoiceFormRef?.current?.formResetHandler();
-                const invoiceLinkPreview = (
-                    <a href={`/invoice/${data?.invoice_number}`} target={'_blank'} className='p-m-txt preview-link-txt'>View Invoice</a>
-                )
-                successModal(invoiceLinkPreview, "Invoice Created successfully");
-            }else {
-                failedModal("Failed to create Invoice!!");
-            }
+            .then((response) => {
+                response.text()
+                let status_code = response?.status;
+                if (status_code === 200) {
+                    invoiceFormRef?.current?.formResetHandler();
+                    const invoiceLinkPreview = (
+                        <a href={`/invoice/${data?.invoice_number}`} target={'_blank'} className='p-m-txt preview-link-txt'>View Invoice</a>
+                    )
+                    successModal(invoiceLinkPreview, "Invoice Created successfully");
+                } else {
+                    failedModal("Failed to create Invoice!!");
+                }
 
-            setTimeout(() => {
-                setActionLoader(false);
-            }, 500);
-        })
-        .then((data) => {
-            // console.log('data', data)
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            somethingWentWrong();
+                setTimeout(() => {
+                    setActionLoader(false);
+                }, 500);
+            })
+            .then((data) => {
+                // console.log('data', data)
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                somethingWentWrong();
 
-            setTimeout(() => {
-                setActionLoader(false);
-            }, 500);
-        });
+                setTimeout(() => {
+                    setActionLoader(false);
+                }, 500);
+            });
     }
 
     return (
@@ -81,12 +81,12 @@ const CreateInvoice = () => {
             <Spin
                 spinning={actionLoader}
             >
-            <InvoiceForm 
-                ref={invoiceFormRef}
-                createInvoiceHandler={createInvoiceHandler}
-                invoiceItemList={invoiceItemList}
-                intialInvoiceData={intialInvoiceData}
-            />
+                <InvoiceForm
+                    ref={invoiceFormRef}
+                    createInvoiceHandler={createInvoiceHandler}
+                    invoiceItemList={invoiceItemList}
+                    intialInvoiceData={intialInvoiceData}
+                />
             </Spin>
         </div>
     );

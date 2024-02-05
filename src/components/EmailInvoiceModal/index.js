@@ -20,30 +20,30 @@ const EmailInvoiceModal = ({ invoiceData }) => {
             },
             body: JSON.stringify(formData),
         })
-        .then(response => {
-            if (response.ok) {
-                successModal("", "Email send successfully.");
-            } else {
+            .then(response => {
+                if (response.ok) {
+                    successModal("", "Email send successfully.");
+                } else {
+                    failedModal("Failed to send email, please try again!!");
+                }
+
+                setTimeout(() => {
+                    setActionLoader(false);
+                    setModalVisible(false);
+                }, 500);
+            })
+            .then(data => {
+                console.log('Response:', data);
+            })
+            .catch(error => {
                 failedModal("Failed to send email, please try again!!");
-            }
+                setTimeout(() => {
+                    setActionLoader(false);
+                    setModalVisible(false);
+                }, 500);
 
-            setTimeout(() => {
-                setActionLoader(false);
-                setModalVisible(false);
-            }, 500);
-        })
-        .then(data => {
-            console.log('Response:', data);
-        })
-        .catch(error => {
-            failedModal("Failed to send email, please try again!!");
-            setTimeout(() => {
-                setActionLoader(false);
-                setModalVisible(false);
-            }, 500);
-
-            console.error('Error sending email:', error);
-        });
+                console.error('Error sending email:', error);
+            });
     };
 
     const formSubmitHandler = () => {
@@ -58,7 +58,7 @@ const EmailInvoiceModal = ({ invoiceData }) => {
                 blobData: fileUrl,
                 fileName: `invoice-${invoiceData?.invoice_number}.pdf`,
             }
-            
+
             handleSendEmail(post);
         }).catch(errorInfo => {
             form.scrollToField(errorInfo?.errorFields?.[0]?.name, {
@@ -68,7 +68,7 @@ const EmailInvoiceModal = ({ invoiceData }) => {
             });
         });
     }
-    
+
 
     const handleEmailChange = (e) => {
         setEmail(e);
@@ -110,7 +110,7 @@ const EmailInvoiceModal = ({ invoiceData }) => {
                             </Space>
                         </Radio.Group>
                     </Form.Item>
-                    
+
                     {email === 'other' ?
                         <Form.Item
                             name={'custom-email'}
@@ -130,7 +130,7 @@ const EmailInvoiceModal = ({ invoiceData }) => {
                                 onChange={(e) => customEmailChangeHandler(e?.target?.value)}
                             />
                         </Form.Item>
-                    :   ""}
+                        : ""}
                     <div className='flex-row justify-content-end column-gap-10'>
                         <Button onClick={() => setModalVisible(false)} disabled={actionLoader}>
                             Cancel

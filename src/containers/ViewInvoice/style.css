@@ -1,12 +1,11 @@
 .preview-invoice__page {
     background: #f2f3f7;
     width: 100%;
-    height: 100vh;
-    overflow: hidden auto;
+    height: auto;
 }
 
 .pi-nodata__container {
-    height: inherit;
+    height: calc(100vh - 80px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,7 +54,7 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    bottom: 0px;    
+    bottom: 0px;
     left: 0px;
     height: 100%;
     width: 100%;
@@ -72,12 +71,14 @@
     transform: rotate(-25deg);
 }
 
-.pi-items__header, .pi-item__item {
+.pi-items__header,
+.pi-item__item {
     display: grid;
     grid-template-columns: 60% 10% 10% 1fr;
 }
 
-.pi-items__header p:last-child, .pi-item__item p:last-child {
+.pi-items__header p:last-child,
+.pi-item__item p:last-child {
     text-align: right;
 }
 
@@ -102,7 +103,7 @@
 
 .pi-items__footer .pi-item__item {
     padding: 10px 0px;
-    
+
 }
 
 .pi-notes__wrap {
@@ -118,7 +119,8 @@
         grid-template-columns: 1fr;
     }
 
-    .pi-items__header, .pi-item__item {
+    .pi-items__header,
+    .pi-item__item {
         grid-template-columns: 40% 20% 20% 1fr;
     }
 }

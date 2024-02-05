@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden auto;
 }
 
 .App-logo {
@@ -32,7 +33,27 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.credit__wrapper {
+  background: #f2f3f7;
+  margin: 0px auto;
+  padding: 30px 0px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.credit__wrapper a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1677ff;
+  transition: all linear 0.3s;
+}
+
+.credit__wrapper a:hover {
+  text-decoration: underline;
 }
